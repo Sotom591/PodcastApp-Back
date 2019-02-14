@@ -1,2 +1,2 @@
-class PodcastPostController < ApplicationController
+class Api::V1::PodcastPostController < ApplicationController
 end

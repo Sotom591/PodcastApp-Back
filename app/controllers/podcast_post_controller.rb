@@ -1,0 +1,2 @@
+class PodcastPostController < ApplicationController
+end

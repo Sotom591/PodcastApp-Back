@@ -1,0 +1,2 @@
+class EpisodePost < ApplicationRecord
+end

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :user_genres
   has_many :genres, through: :user_genres
   ###pragma mark: Friends
-  ###(we can delete this comment replacing Friends Model on master branch)
+  ###(we can delete this comment after replacing Friends Model on master branch)
   ###Because friendships will have equal weight, friendships will connect with inverse_friendships
   has_many :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"

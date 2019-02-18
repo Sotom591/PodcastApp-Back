@@ -1,4 +1,4 @@
 class Episode < ApplicationRecord
   belongs_to :podcast
-  belongs_to :episode_post
+  has_many :episode_posts
 end

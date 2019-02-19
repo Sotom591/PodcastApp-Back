@@ -23,7 +23,7 @@ class User < ApplicationRecord
   # Users who stil need to confirm a friend request
   def pending_friendships
     friendships.map{ |frienship|
-      friendship.friend if !friendshi.confirmed
+      friendship.friend if !friendship.confirmed
     }.compact
   end
 

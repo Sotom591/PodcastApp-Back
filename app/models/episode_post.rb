@@ -1,5 +1,5 @@
 class EpisodePost < ApplicationRecord
   belongs_to :user
-  has_many :episodes
-
+  belongs_to :episode
+  
 end

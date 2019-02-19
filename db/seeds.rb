@@ -1,5 +1,7 @@
 require 'faker'
 
+User.destroy_all
+
 jenny = User.create(firstName: "Jenny", lastName: "I", email:"jenny@qmail.com", username: "Jenny1", password: "pw", avatar: Faker::Avatar.image)
 mike = User.create(firstName: "Mike", lastName: "K", email:"mike@qmail.com", username: "Mike1", password: "pw", avatar: Faker::Avatar.image)
 beth = User.create(firstName: "Beth", lastName: "W", email:"beth@qmail.com", username: "Beth1", password: "pw", avatar: Faker::Avatar.image)

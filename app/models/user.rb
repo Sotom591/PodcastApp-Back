@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
   # Users who have requested other users as friendshi
   def friend_requests
-    inverse_friendships.map{|friendship|
+    inverse_friendships.map{ |friendship|
       if !friendship.confirmed
     }.compact
   end

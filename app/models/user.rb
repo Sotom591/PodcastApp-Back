@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   has_many :episode_posts
   has_many :podcast_posts
   has_many :subscriptions

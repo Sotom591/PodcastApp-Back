@@ -15,22 +15,22 @@ class User < ApplicationRecord
      }
 
      friends_array += inverse_friendships.map{ |friendship|
-       frienship.user if friendship.confirmed
+       friendship.user if friendship.confirmed
      }
      friends_array.compact
   end
 
   # Users who stil need to confirm a friend request
   def pending_friendships
-    friendships.map{ |frienship|
+    friendships.map{ |friendship|
       friendship.friend if !friendship.confirmed
     }.compact
   end
 
-  # Users who have requested other users as friendshi
+  # Users who have requested other users as friends
   def friend_requests
-    inverse_friendships.map{ |friendship|
-      if !friendship.confirmed
+    inverse_friendships.select { |friendship|
+      !friendship.confirmed
     }.compact
   end
 

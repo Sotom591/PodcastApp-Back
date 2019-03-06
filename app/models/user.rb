@@ -8,6 +8,11 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
 
+  #remember to add in password validations towards the end of production
+  validates :username, uniqueness: true
+
+
+
   # Once friends confirmed, return all users who are connected to the given user
   def friends
     friends_array = friendships.map{ |friendship|

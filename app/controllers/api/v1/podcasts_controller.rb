@@ -1,18 +1,18 @@
 class Api::V1::PodcastsController < ApplicationController
-  def index
-   render json: Podcasts.all
+ def index
+   render json: Podcast.all
  end
 
  def show
-   render json: Podcasts.find(params[:id])
+   render json: Podcast.find(params[:id])
  end
 
  def create
-   render json: Podcasts.create(podcasts_params)
+   render json: Podcast.create(podcasts_params)
  end
 
  def destroy
-   render json: Podcasts.find(params[:id]).destroy
+   render json: Podcast.find(params[:id]).destroy
  end
 
  private

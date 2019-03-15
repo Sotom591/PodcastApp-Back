@@ -20,6 +20,8 @@ gem "jwt", "~> 2.1"
 
 gem 'faker'
 
+gem 'unirest'
+
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 

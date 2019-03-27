@@ -1,3 +1,3 @@
 class PodcastSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :podcast_id
 end

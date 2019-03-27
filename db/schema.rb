@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_170607) do
 
   create_table "podcasts", force: :cascade do |t|
     t.string "title"
-    t.integer "podcast_id"
+    t.string "podcast_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

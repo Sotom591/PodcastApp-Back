@@ -23,6 +23,6 @@ podcast4 = Podcast.create(podcast_id: "b9721d03e791414aa885733391f5c01f")
 podcast5 = Podcast.create(podcast_id: "8cb941141a7c434d945397cfd8b12e58")
 
 #podcast_id is the foreign key ID from our backend API
-sub1 = Subscription.create(user_id: 2, podcast_id: 1)
-sub2 = Subscription.create(user_id: 2, podcast_id: 2)
-sub3 = Subscription.create(user_id: 2, podcast_id: 4)
+sub1 = Subscription.create(user_id: 2, podcast_id: podcast1.id)
+sub2 = Subscription.create(user_id: 2, podcast_id: podcast2.id)
+sub3 = Subscription.create(user_id: 2, podcast_id: podcast4.id)

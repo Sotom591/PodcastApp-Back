@@ -5,6 +5,7 @@ class Api::V1::AuthController < ApplicationController
     if @user && @user.authenticate(params[:password])
       render json: {
         message: "valid",
+        #Changed to use UserSerializer here so returned JSON is consistent
         user_info: UserSerializer.new(@user).as_json,
         error: false,
         token: encode({ user_id: @user.id })

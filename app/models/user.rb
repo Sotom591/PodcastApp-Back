@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
 
   #remember to add in password validations towards the end of production
-  validates :username, uniqueness: true
+  validates :username, :uniqueness => {:case_sensitive => false}
 
 
 
